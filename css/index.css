@@ -1,0 +1,2419 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6,hr, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	font-family: 'Fira Sans Condensed', sans-serif;
+	overflow: hidden;
+
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------cierre de reset-----------*/
+
+/* ---------------Preloader--------------- */
+
+#preloader {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:url(../img/fondopreloader.jpg) center no-repeat;
+  background-size: cover;
+  /* change if the mask should have another color then white */
+  z-index: 999;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 200px;
+  height: 200px;
+  
+ 
+  
+  margin: 80px auto;
+  animation-name: rotacion;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+ @keyframes rotacion { 
+        from { 
+           
+            transform: rotate(0deg); 
+        } to { 
+           
+            transform: rotate(360deg);
+          
+        }
+}
+
+#status img {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  margin-top:-10px ; 
+  animation-name:imagen;
+  animation-duration: 1.5s;
+  animation-iteration-count:1;
+  animation-timing-function: linear;
+
+}
+
+@keyframes imagen {
+  from {
+    opacity: 0;
+
+  }
+
+  to {
+    opacity:1;
+  }
+}
+
+#preloader h2 {
+
+  padding:100px 0 40px 0;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 100px;
+  color:#FFF;
+  opacity: 1; 
+  animation-name:carga;
+  animation-duration: 0.7s;
+  animation-iteration-count:1;
+  animation-timing-function: linear;
+
+}
+
+
+@keyframes carga {
+  from {
+    opacity: 0;
+
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#preloader h4 {
+    
+    text-align: center;
+    font-size:40px;
+    opacity: 1;
+    margin-top: 80px;
+    font-family: 'Lato', sans-serif;
+    color:#FFF;
+
+    animation-name:hola;
+    animation-duration: 0.7s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+
+    animation-name:loading;
+    animation-duration: 0.7s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+
+}
+
+@keyframes loading {
+  from {
+    opacity: 0.3;
+
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+    /*media screen preload*/
+    @media screen and (max-width: 1024px){
+        #preloader h2 {
+          font-size: 80px;
+          text-align: center;
+        }
+
+        #preloader h4 {
+          font-size: 30px;
+          margin-top: 30px;
+          text-align: center;
+        }
+    }
+
+
+    @media screen and (max-width: 830px){
+        #preloader h2 {
+          font-size: 40px;
+          text-align: center;
+        }
+
+        #preloader h4 {
+          font-size: 20px;
+          margin-top: 50px;
+          text-align: center;
+        }
+
+    }
+
+
+
+
+/*scroll-top*/
+
+a.back-to-top {
+  display: none;
+  transition: all linear 0.3s;
+  opacity: 0.7;
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px;
+  position: fixed;
+  z-index: 99;
+  right: 20px;
+  bottom: 20px;
+  background: rgba(0,60,93,1) url("../img/up-arrow.png") no-repeat center 43%;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+
+a.back-to-top:hover {
+  opacity: 1;
+  transition: all 0.3s;
+  }
+
+
+
+/* ----------------------MODULO INICIO ------------------- */
+
+
+#moduloinicio {
+	width: 100%;
+  height: 800px;
+	background: url(../img/header.jpg) center no-repeat;
+	background-size: cover; 
+}
+
+#moduloinicio .contenedor{
+	width: 1280px;
+	height: 800px;
+	margin: 0 auto;
+
+}
+
+#contentmoduloinicio {
+	display: inline-block;
+	width:390px;
+	height: 675px;
+	background-image: url(../img/flor.png); 
+	margin-left: 80px;
+}
+.moduloiniciotext1{
+	width: 338px;
+	height: 270px;
+    margin: 300px auto 0 auto;
+	z-index: 112;
+}
+.moduloiniciotext1 h3 {
+	font-size: 68px;
+	font-family: 'Lato', sans-serif;
+	color: rgba(0,60,93,1);
+	text-shadow: 2px 2px 4px #000000;
+
+}
+
+.moduloiniciotext1 h4 {
+	font-size: 25px;
+	font-family: 'Lato', sans-serif;
+	color: rgba(32,159,203,1);
+	font-weight: 300;
+	line-height: 35px;
+
+
+}
+
+.moduloiniciotext1 p {
+	font-size: 35px;
+	font-family: 'Lato', sans-serif;
+	color: rgba(32,159,203,1);
+	text-shadow: 2px 2px 4px #000000;	
+}
+#logos {
+  width: 400px;
+  height:91px;
+	margin-top: 30px;
+	background:url(../img/logos.png) center no-repeat;
+  background-size: cover;
+	margin-right: 40px;
+	float: right;
+}
+
+
+#menu {
+	margin-top: -100px;
+	float: right;
+	width:750px;
+	padding:20px 0 26px 10px;
+	background-color:rgba(0, 48, 79, 0.7);
+  margin-right: 18px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+
+}
+
+
+#menu ul li {
+	display: inline;
+  border-bottom: 3px solid #FFCE00;
+  padding: 15px 0 17px 0;
+      margin-left: 5px;
+
+}
+
+#menu ul  a {
+  transition: all 0.4s;
+	display: inline;
+	font-size: 20px;
+	margin-right:10px;
+	margin-left:20px;
+	color: #FFCE00;
+	text-decoration: none;
+	font-weight: 800;
+	 font-family: 'Lato', sans-serif;
+}
+
+#menu ul  a:hover {
+  color: #FFF;
+}
+
+/*----mediascreen section1----*/
+          @media screen and (max-width: 1024px){
+            #moduloinicio {
+            width: 100%;
+            height: auto;
+          }
+            #moduloinicio .contenedor {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+
+          }
+          #contentmoduloinicio {
+            display: inline-block;
+            width:250px;
+            height: 432px;
+            background-image: url(../img/flor.png) no-repeat ; 
+           background-size: cover;
+           float: none;
+
+          }
+          .moduloiniciotext1{
+            width: 100%;
+              padding-left: 15px;
+              margin: 200px auto 0 auto;
+            z-index: 112;
+            box-sizing:border-box;
+
+          }
+          .moduloiniciotext1 h3 {
+            font-size: 40px;
+            font-family: 'Lato', sans-serif;
+            color: rgba(0,60,93,1);
+            text-shadow: 2px 2px 4px #000000;
+
+
+          }
+
+          .moduloiniciotext1 h4 {
+            font-size: 15px;
+            font-family: 'Lato', sans-serif;
+            color: rgba(32,159,203,1);
+            font-weight: 300;
+            line-height: 20px;
+            margin-top: 5px;
+
+
+          }
+
+          .moduloiniciotext1 p {
+            font-size: 25px;
+            font-family: 'Lato', sans-serif;
+            color: rgba(32,159,203,1);
+            text-shadow: 2px 2px 4px #000000; 
+          }
+          #menu {
+            margin-top: -250px;
+            float: right;
+            width:150px;
+            padding:0;
+             border-bottom-left-radius: 0px;
+            border-top-left-radius: 0px;
+            margin-right: 40px;
+
+          }
+           #menu ul li {
+          
+           border: 0px;
+           padding: 0px;
+           border-radius:0px;
+           margin-left: 0px;
+
+           }
+          #menu ul  a {
+            display: block;
+            font-size: 14px;
+            margin:0 auto;
+            color: #FFCE00;
+            border-bottom: solid 1px #FFCE00;
+            text-decoration: none;
+            font-weight: 800;
+             font-family: 'Lato', sans-serif;
+             background-color:rgba(0, 48, 79, 0.3);
+             padding: 15px;
+             text-align: center;
+          }
+
+          }
+          /*----mediascreen section1----*/
+          @media screen and (max-width: 830px){
+           #moduloinicio {
+            width: 100%;
+            height: auto;
+          }
+            #moduloinicio .contenedor {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+
+          }
+          #contentmoduloinicio{
+            display:block;
+            width:250px;
+            height: 432px;
+            background-image: url(../img/flor.png) no-repeat ; 
+           background-size: cover;
+           margin:0 auto;
+
+          }
+          .moduloiniciotext1{
+            width: 100%;
+            padding-top: 200px;
+              padding-left: 15px;
+              margin: 10px auto 0 auto;
+            z-index: 112;
+            box-sizing:border-box;
+
+          }
+          .moduloiniciotext1 h3 {
+            font-size: 40px;
+            font-family: 'Lato', sans-serif;
+            color: rgba(0,60,93,1);
+            text-shadow: 2px 2px 4px #000000;
+
+
+          }
+
+          .moduloiniciotext1 h4 {
+            font-size: 15px;
+            font-family: 'Lato', sans-serif;
+            color: rgba(32,159,203,1);
+            font-weight: 300;
+            line-height: 20px;
+            margin-top: 5px;
+
+
+          }
+
+          .moduloiniciotext1 p {
+            font-size: 25px;
+            font-family: 'Lato', sans-serif;
+            color: rgba(32,159,203,1);
+            text-shadow: 2px 2px 4px #000000; 
+          }
+          #logos {
+            width: 250px;
+            height:57px;
+            margin:0 auto;
+            background:url(../img/logos.png) center no-repeat;
+            background-size: cover;
+            display: block;
+            float: none;
+          }
+
+
+          #menu {
+            margin:10px auto 0 auto;
+            float: none;
+            width:100%;
+            padding:0;
+            border-bottom-left-radius: 0px;
+            border-top-left-radius: 0px;
+           
+
+          }
+
+          #menu ul  a {
+            display: block;
+            font-size: 14px;
+            margin:0 auto;
+            color: #FFCE00;
+            border-bottom: solid 1px #FFCE00;
+            text-decoration: none;
+            font-weight: 800;
+             font-family: 'Lato', sans-serif;
+             background-color:rgba(0, 48, 79, 0.3);
+             padding: 10px;
+             text-align: center;
+          }
+          }
+
+
+
+/* ----------------------MODULO UNO-------------------------*/
+
+#modulouno{
+
+  width: 100%;
+}
+
+#modulouno .contenedor {
+
+	background: url(../img/9abril-section-fondo.png) center no-repeat;
+	
+	max-width: 1280px;
+	height: 800px;
+  margin:0 auto;
+	box-sizing:border-box;
+	padding-top: 35px;
+
+
+}
+.title{
+	width: 1200px;
+	height: 90px;
+	margin:0 auto 0 auto;
+
+}
+h1{
+	 font-family: 'Lato', sans-serif;
+	 font-size: 40px;
+	 color: rgba(0,60,93,1);
+	 text-align: center;
+	 padding: 20px;
+	 font-weight: bolder;
+	 text-shadow: 2px 2px 4px #000000;
+
+}
+.contentmodulouno{
+	width: 1280px;
+	height: 565px;
+	margin:40px auto 0 auto;
+}
+.contentmodulounotext{
+	width: 730px;
+	height: 565px;
+	float: left;
+    margin-left: 40px;
+    position: inherit;
+    background:rgba(255,255,255,0.5);
+
+
+}
+.contentmodulounotext p{
+	font-family: 'Lato', sans-serif;
+	    font-weight: 500;
+    font-size: 18px;
+    padding: 45px;
+    padding-top: 0px;
+    color:rgba(0,60,93,1);
+        line-height: 1.3;
+
+}
+.contentmodulounotext p span{
+  font-size:20px;
+    font-weight: 900;
+  }
+
+.contentmodulounophoto{
+	width: 445px;
+	height: 565px;
+	background: url(../img/9abrilUsar.jpg)center no-repeat;
+	background-size: cover;
+	float: left;
+    margin-left: 30px;
+}
+          /*------------MEDIASCREEN MODULO UNO (1024 PX)----------*/
+
+          @media screen and (max-width: 1024px){
+          #modulouno .contenedor {
+
+            background: url(../img/9abril-section-fondo.png) center no-repeat;
+            
+            width: 100%;
+            height: auto;
+            box-sizing:border-box;
+            padding-top: 35px;
+
+
+          }
+          .title{
+            max-width:100%;
+            height: 90px;
+            margin:0 auto 0 auto;
+
+          }
+          .contentmodulouno{
+            width: 100%;
+            height: auto;
+            margin:0 auto 0 auto;
+          }
+          .contentmodulounotext{
+            width: 85%;
+            height: auto;
+            float: none;
+            display: block;
+              position: inherit;
+              background:rgba(255,255,255,0.5);
+          }
+          .contentmodulounotext p{
+              font-size:15px;
+              padding:20px;
+              text-align: justify;
+          }
+          .contentmodulounotext p span{
+            font-size:15px;
+              font-weight: 800;
+            }
+          .contentmodulounophoto{
+            width: 250px;
+            height: 315px;
+            background: url(../img/9abrilUsar.jpg)center no-repeat;
+            background-size: cover;
+            float: none;
+            display:block;
+            margin: 0 auto;
+            
+          }
+          }
+
+/*------------------ MODULO DOS------------------*/
+
+#modulodos .contenedor{
+	background: url(../img/rodada-section-fondo.png);
+	max-width: 1280px;
+	height: 800px;
+	box-sizing:border-box;
+	padding-top: 35px;
+  margin:0 auto;
+}
+
+.contentmodulodos{
+	max-width: 1280px;
+	height: 650px;
+	margin:30px auto 0 auto;
+}
+
+
+.title {
+	max-width:1200px;
+	height: 90px;
+	margin: 0 auto 0 auto;
+
+
+}
+
+/* css de los input*/
+.tabs .boton1  {
+   transition: all 0.4s;
+  display:inline-block;
+  vertical-align:top;
+  height:70px;
+  width:488px;
+  background: url(../img/4hdfthfghfngbnn.jpg) center no-repeat;
+  background-size:cover;
+  margin-bottom: 15px;
+  margin-left: 25px;
+}
+.tabs .boton2  {
+   transition: all 0.4s;
+  display:inline-block;
+  vertical-align:top;
+  height:70px;
+  width:488px;
+  background: url(../img/Untitled-nogal3.jpg) center no-repeat;
+  background-size:cover;
+  margin-bottom: 15px;
+  margin-left: 25px;
+}
+.tabs .boton3  {
+   transition: all 0.4s;
+  display:inline-block;
+  vertical-align:top;
+  height:70px;
+  width:488px;
+  background: url(../img/nacionalazul.jpg) center no-repeat;
+  background-size:cover;
+  margin-bottom: 15px;
+  margin-left: 25px;
+}
+.tabs .boton4  {
+   transition: all 0.4s;
+  display:inline-block;
+  vertical-align:top;
+  height:70px;
+  width:488px;
+   background: url(../img/ministerioazul.jpg) center no-repeat;
+  background-size:cover;
+  margin-bottom: 15px;
+  margin-left: 25px;
+}
+.tabs .boton5  {
+   transition: all 0.4s;
+  display:inline-block;
+  vertical-align:top;
+  height:70px;
+  width:488px;
+  background: url(../img/puenteazul.jpg) center no-repeat;
+  background-size:cover;
+  margin-bottom: 15px;
+  margin-left: 25px;
+}
+.tabs .boton6  {
+   transition: all 0.4s;
+  display:inline-block;
+  vertical-align:top;
+  height:70px;
+  width:488px;
+  background: url(../img/ALTA-MEMORIAL-RODRIGO-DAVILA-_MGDXZFDZXFD_8128.jpg) center no-repeat;
+  background-size:cover;
+  margin-left: 25px;
+}
+
+.tabs {
+  list-style-type:none;
+  padding:0;
+  margin:0;
+  
+}
+.tabs li > input {
+  
+  height: 22px;
+  line-height: 22px;
+  padding-left: 18px;
+  display: none;
+}
+
+.tab-content {
+  
+
+   max-width:670px;
+    height: 582px;
+  display:inline-block;
+  vertical-align:top;
+  display: none;
+  position:absolute;
+  margin-left: 35px;
+
+}
+.tab-content2{
+
+  max-width:670px;
+    height: 582px;
+  display:inline-block;
+
+  display: none;
+  position:absolute;
+  margin-left: 35px;
+  margin-top: -86px;
+}
+.tab-content3{
+
+  max-width:670px;
+    height: 582px;
+  display:inline-block;
+
+  display: none;
+  position:absolute;
+  margin-left: 35px;
+  margin-top: -171px;
+}
+.tab-content4{
+
+  max-width:670px;
+    height: 582px;
+  display:inline-block;
+
+  display: none;
+  position:absolute;
+  margin-left: 35px;
+  margin-top: -255px;
+}
+.tab-content5{
+
+  max-width:670px;
+    height: 582px;
+  display:inline-block;
+
+  display: none;
+  position:absolute;
+  margin-left: 35px;
+  margin-top:-341px;
+}
+.tab-content6{
+
+  max-width:670px;
+    height: 582px;
+  display:inline-block;
+
+  display: none;
+  position:absolute;
+  margin-left: 35px;
+  margin-top:-425px;
+}
+.tab-content p{
+	font-size: 20px;
+	 font-family: 'Lato', sans-serif;
+	 text-align: justify;
+	 padding: 20px;
+	 font-weight: 400;
+	     color: rgba(0,60,93,1);
+
+}
+.tab-content2 p{
+	font-size: 20px;
+	 font-family: 'Lato', sans-serif;
+	 text-align: justify;
+	 padding: 20px;
+	 font-weight: 400;
+	     color: rgba(0,60,93,1);
+	     
+}.tab-content3 p{
+	font-size: 20px;
+	 font-family: 'Lato', sans-serif;
+	 text-align: justify;
+	 padding: 20px;
+	 font-weight: 400;
+	     color: rgba(0,60,93,1);
+	     
+}.tab-content4 p{
+	font-size: 20px;
+	 font-family: 'Lato', sans-serif;
+	 text-align: justify;
+	 padding: 20px;
+	 font-weight: 400;
+	     color: rgba(0,60,93,1);
+	     
+}.tab-content5 p{
+	font-size: 20px;
+	 font-family: 'Lato', sans-serif;
+	 text-align: justify;
+	 padding: 18px;
+	 font-weight: 400;
+	     color: rgba(0,60,93,1);
+	     
+}
+.tab-content6 p{
+  font-size: 20px;
+   font-family: 'Lato', sans-serif;
+   text-align: justify;
+   padding: 18px;
+   font-weight: 400;
+       color: rgba(0,60,93,1);
+       
+}
+.tabs li >  label {
+
+  height: 30px;
+  line-height: 30px;
+  max-width:600px;
+  cursor:pointer;
+  color:rgba(255,255,255,1);
+
+    
+}
+label {
+	color:rgba(255,255,255,1);
+
+}
+.tabs li >  label  h2{
+    margin: 5px auto 0 auto;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    text-align: center;
+
+
+}
+
+.tabs .boton1:hover {
+	color: #FFCE00;
+}
+.tabs .boton2:hover {
+	color: #FFCE00;
+}
+.tabs .boton3:hover {
+	color: #FFCE00;
+}
+.tabs .boton4:hover {
+	color: #FFCE00;
+}
+.tabs .boton5:hover {
+	color: #FFCE00;
+}
+.tabs .boton6:hover {
+  color: #FFCE00;
+}
+
+
+
+.tabs li > input:checked + label {
+
+  color:#FFCE00;
+}
+
+  
+.tabs li > input:checked ~ .tab-content {
+  
+  display:inline-block; font-weight: 100;
+}
+.tabs li > input:checked ~ .tab-content2 {
+  
+  display:inline-block; font-weight: 100;
+}
+.tabs li > input:checked ~ .tab-content3 {
+  
+  display:inline-block; font-weight: 100;
+}
+.tabs li > input:checked ~ .tab-content4 {
+  
+  display:inline-block; font-weight: 100;
+}
+.tabs li > input:checked ~ .tab-content5 {
+  
+  display:inline-block; font-weight: 100;
+}
+.tabs li > input:checked ~ .tab-content6 {
+
+  display:inline-block; font-weight: 100;
+}
+
+.image1{
+	max-width: 670px;
+	height: 345px;
+	margin: 0 auto 0 auto;
+  background: url(../img/parquelasallegrande.jpg);
+
+}
+.image2{
+
+  max-width: 670px;
+  height: 345px;
+  margin: 0 auto 0 auto;
+  background: url(../img/nogal-color.jpg);
+}
+.image3{
+  max-width: 670px;
+  height: 345px;
+  margin: 0 auto 0 auto;
+  background: url(../img/nacional-color.jpg);
+}
+.image4{
+  max-width: 670px;
+  height: 345px;
+  margin: 0 auto 0 auto;
+  background: url(../img/ministerio-color.jpg);
+}
+.image5{
+  max-width: 670px;
+  height: 345px;
+  margin: 0 auto 0 auto;
+  background: url(../img/puente-color.jpg);
+}
+.image6{
+  max-width: 670px;
+  height: 345px;
+  margin: 0 auto 0 auto;
+  background: url(../img/cmpr-color.jpg);
+}
+.textocaja{
+	max-width: 670px;
+	height: 236px;
+	
+}
+.textocaja p{
+
+	text-align: justify;
+	
+	font-size: 20px;
+	
+}
+          /*---------MEDIASCREEN MODULO DOS (1024 PX)----*/
+
+          @media screen and (max-width: 1024px){
+           #modulodos .contenedor{
+            background: url(../img/rodada-section-fondo.png);
+            max-width: 100%;
+            height: auto;
+            box-sizing:border-box;
+            padding-top: 35px;
+            margin:0 auto;
+           
+          }
+
+          .contentmodulodos{
+            max-width: 100%;
+            height: auto;
+            margin:30px auto 0 auto;
+          }
+
+
+          .title {
+            max-width:100%;
+            height: 90px;
+            margin: 0 auto 0 auto;
+
+
+          }
+          .tabs .boton1  {
+            display:block;
+            vertical-align:top;
+            height:70px;
+            width:488px;
+            background: url(../img/4hdfthfghfngbnn.jpg) center no-repeat;
+            background-size:cover;
+            margin-bottom: 15px;
+            margin:0 auto;
+          }
+          .tabs .boton2  {
+            display:block;
+            vertical-align:top;
+            height:70px;
+            width:488px;
+            background: url(../img/Untitled-nogal3.jpg) center no-repeat;
+            background-size:cover;
+            margin-bottom: 15px;
+            margin:0 auto;
+          }
+          .tabs .boton3  {
+            display:block;
+            vertical-align:top;
+            height:70px;
+            width:488px;
+            background: url(../img/nacionalazul.jpg) center no-repeat;
+            background-size:cover;
+            margin-bottom: 15px;
+            margin: 0 auto;
+          }
+          .tabs .boton4  {
+            display:block;
+            vertical-align:top;
+            height:70px;
+            width:488px;
+             background: url(../img/Untitled-ministewr2.jpg) center no-repeat;
+            background-size:cover;
+            margin-bottom: 15px;
+            margin:0 auto;
+          }
+          .tabs .boton5  {
+            display:block;
+            vertical-align:top;
+            height:70px;
+            width:488px;
+            background: url(../img/puenteazul.jpg) center no-repeat;
+            background-size:cover;
+            margin-bottom: 15px;
+            margin:0 auto; 
+          }
+          .tabs .boton6  {
+            display:block;
+            vertical-align:top;
+            height:70px;
+            width:488px;
+            background: url(../img/ALTA-MEMORIAL-RODRIGO-DAVILA-_MGDXZFDZXFD_8128.jpg) center no-repeat;
+            background-size:cover;
+            margin:0 auto;
+          }
+
+          .tabs {
+            list-style-type:none;
+            padding:0;
+            margin:0;
+            
+          }
+          .tabs li > input {
+            
+            height: 22px;
+            line-height: 22px;
+            padding-left: 18px;
+            display: none;
+          }
+
+          .tab-content {
+            
+
+             width:488px;
+              height: auto;
+            display:block;
+            vertical-align:top;
+            display: none;
+            position:relative;
+            margin-left: 15px;
+            margin: 10px auto;
+
+          }
+          .tab-content2{
+
+           width:488px;
+            height: auto;
+            display:block;
+            display: none;
+            position:relative;
+            margin-left: 15px;
+            margin: 10px auto;
+          }
+          .tab-content3{
+
+           width:488px;
+              height: auto;
+            display:block;
+
+            display: none;
+            position:relative;
+            margin-left: 15px;
+            margin: 10px auto;
+          }
+          .tab-content4{
+
+           width:488px;
+              height: auto;
+            display:block;
+
+            display: none;
+            position:relative;
+            margin-left: 15px;
+            margin: 10px auto;
+          }
+          .tab-content5{
+
+            width:488px;
+              height: auto;
+            display:block;
+
+            display: none;
+            position:relative;
+            margin-left: 15px;
+            margin: 10px auto;
+          }
+          .tab-content6{
+
+            width:488px;
+              height: auto;
+            display:block;
+
+            display: none;
+            position:relative;
+            margin-left: 15px;
+           margin: 10px auto;
+          }
+          .tab-content p{
+            font-size: 15px;
+             font-family: 'Lato', sans-serif;
+             text-align: justify;
+             padding: 10px;
+             font-weight: 400;
+                 color: rgba(0,60,93,1);
+
+          }
+          .tab-content2 p{
+            font-size: 15px;
+             font-family: 'Lato', sans-serif;
+             text-align: justify;
+             padding: 10px;
+             font-weight: 400;
+                 color: rgba(0,60,93,1);
+                 
+          }.tab-content3 p{
+            font-size: 15px;
+             font-family: 'Lato', sans-serif;
+             text-align: justify;
+             padding: 10px;
+             font-weight: 400;
+                 color: rgba(0,60,93,1);
+                 
+          }.tab-content4 p{
+            font-size: 15px;
+             font-family: 'Lato', sans-serif;
+             text-align: justify;
+             padding: 10px;
+             font-weight: 400;
+                 color: rgba(0,60,93,1);
+                 
+          }.tab-content5 p{
+            font-size: 15px;
+             font-family: 'Lato', sans-serif;
+             text-align: justify;
+             padding: 10px;
+             font-weight: 400;
+                 color: rgba(0,60,93,1);
+                 
+          }
+          .tab-content6 p{
+            font-size: 15px;
+             font-family: 'Lato', sans-serif;
+             text-align: justify;
+             padding: 10px;
+             font-weight: 400;
+                 color: rgba(0,60,93,1);
+                 
+          }
+          .tabs li >  label {
+
+            height: 30px;
+            line-height: 30px;
+            max-width:600px;
+            cursor:pointer;
+            color:rgba(255,255,255,1);
+
+              
+          }
+          label {
+            color:rgba(255,255,255,1);
+
+          }
+          .tabs li >  label  h2{
+              margin: 5px auto 0 auto;
+              font-family: 'Lato', sans-serif;
+              font-size: 20px;
+              text-align: center;
+
+
+          }
+
+          .tabs .boton1:hover {
+            color: #FFCE00;
+          }
+          .tabs .boton2:hover {
+            color: #FFCE00;
+          }
+          .tabs .boton3:hover {
+            color: #FFCE00;
+          }
+          .tabs .boton4:hover {
+            color: #FFCE00;
+          }
+          .tabs .boton5:hover {
+            color: #FFCE00;
+          }
+          .tabs .boton6:hover {
+            color: #FFCE00;
+          }
+
+
+
+          .tabs li > input:checked + label {
+            color:#FFCE00;
+          }
+
+          .tabs li > input:checked ~ .tab-content {
+           
+            display:block; font-weight: 100;
+          }
+          .tabs li > input:checked ~ .tab-content2 {
+            display:block; font-weight: 100;
+
+          }
+          .tabs li > input:checked ~ .tab-content3 {
+            display:block; font-weight: 100;
+
+          }
+          .tabs li > input:checked ~ .tab-content4 {
+            display:block; font-weight: 100;
+            
+          }
+          .tabs li > input:checked ~ .tab-content5 {
+            display:block; font-weight: 100;
+
+          }
+          .tabs li > input:checked ~ .tab-content6 {
+            display:block; font-weight: 100;
+           
+          }
+
+          .image1{
+            width: 488px;
+            height: 251px;
+            margin: 0 auto 0 auto;
+            background: url(../img/parquelasallegrande.jpg) center no-repeat;
+            background-size: cover;
+
+          }
+          .image2{
+            width: 488px;
+            height: 251px;
+            margin: 0 auto 0 auto;
+             background: url(../img/nogal-color.jpg) center no-repeat;
+            background-size: cover;
+          }
+          .image3{
+             width: 488px;
+            height: 251px;
+            margin: 0 auto 0 auto;
+            background: url(../img/nacional-color.jpg) center no-repeat;
+            background-size: cover;
+          }
+          .image4{
+             width: 488px;
+            height: 251px;
+            margin: 0 auto 0 auto;
+             background: url(../img/ministerio-color.jpg) center no-repeat;
+            background-size: cover;
+          }
+          .image5{
+             width: 488px;
+            height: 251px;
+            margin: 0 auto 0 auto;
+            background: url(../img/puente-color.jpg) center no-repeat;
+            background-size: cover;
+          }
+          .image6{
+            width: 488px;
+            height: 251px;
+            margin: 0 auto 0 auto;
+            background: url(../img/cmpr-color.jpg) center no-repeat;
+            background-size: cover;
+          }
+          .textocaja{
+            width: 100%;
+            height: auto;
+            
+          }
+          .textocaja{
+            max-width: 670px;
+            height: auto;
+            
+          }
+          .textocaja p{
+
+            text-align: justify;
+            
+            font-size: 15px;
+            
+          }
+
+          }
+          /*------------------MEDIASCREEN MODULO DOS (520 px)------------*/
+
+          @media screen and (max-width: 520px){
+
+           #modulodos .contenedor{
+            background: url(../img/rodada-section-fondo.png);
+            max-width: 100%;
+            height: auto;
+            box-sizing:border-box;
+            padding-top: 35px;
+           
+          }
+
+          .contentmodulodos{
+            max-width: 100%;
+            height: auto;
+            margin:30px auto 0 auto;
+          }
+
+
+          .title {
+            max-width:100%;
+            height: 90px;
+            margin: 0 auto 0 auto;
+
+
+          }
+          .tabs .boton1  {
+            display:block;
+            vertical-align:top;
+            height:140px;
+            width:250px;
+            background: url(../img/4hdfthfghfngbnn.jpg) center no-repeat;
+            background-size:cover;
+            margin-bottom: 15px;
+            margin:0 auto;
+          }
+          .tabs .boton2  {
+            display:block;
+            vertical-align:top;
+            height:140px;
+            width:250px;
+            background: url(../img/Untitled-nogal3.jpg) center no-repeat;
+            background-size:cover;
+            margin-bottom: 15px;
+            margin:0 auto;
+          }
+          .tabs .boton3  {
+            display:block;
+            vertical-align:top;
+            height:140px;
+            width:250px;
+            background: url(..//img/nacionalazul.jpg) center no-repeat;
+            background-size:cover;
+            margin-bottom: 15px;
+            margin: 0 auto;
+          }
+          .tabs .boton4  {
+            display:block;
+            vertical-align:top;
+            height:140px;
+            width:250px;
+             background: url(../img/Untitled-ministewr2.jpg) center no-repeat;
+            background-size:cover;
+            margin-bottom: 15px;
+            margin:0 auto;
+          }
+          .tabs .boton5  {
+            display:block;
+            vertical-align:top;
+            height:140px;
+            width:250px;
+            background: url(../img/puenteazul.jpg) center no-repeat;
+            background-size:cover;
+            margin-bottom: 15px;
+            margin:0 auto; 
+          }
+          .tabs .boton6  {
+            display:block;
+            vertical-align:top;
+            height:140px;
+            width:250px;
+            background: url(../img/ALTA-MEMORIAL-RODRIGO-DAVILA-_MGDXZFDZXFD_8128.jpg) center no-repeat;
+            background-size:cover;
+            margin:0 auto;
+          }
+
+          .tabs {
+            list-style-type:none;
+            padding:0;
+            margin:0;
+            
+          }
+          .tabs li > input {
+            
+            height: 22px;
+            line-height: 22px;
+            padding-left: 18px;
+            display: none;
+          }
+
+          .tab-content {
+            
+
+             width:95%;
+              height: auto;
+            display:block;
+            vertical-align:top;
+            display: none;
+            position:relative;
+            margin-left: 15px;
+            margin: 10px auto;
+
+          }
+          .tab-content2{
+
+           width:95%;
+            height: auto;
+            display:block;
+            display: none;
+            position:relative;
+            margin-left: 15px;
+            margin: 10px auto;
+          }
+          .tab-content3{
+
+           width:95%;
+              height: auto;
+            display:block;
+
+            display: none;
+            position:relative;
+            margin-left: 15px;
+            margin: 10px auto;
+          }
+          .tab-content4{
+
+           width:95%;
+              height: auto;
+            display:block;
+
+            display: none;
+            position:relative;
+            margin-left: 15px;
+            margin: 10px auto;
+          }
+          .tab-content5{
+
+            width:95%;
+              height: auto;
+            display:block;
+
+            display: none;
+            position:relative;
+            margin-left: 15px;
+            margin: 10px auto;
+          }
+          .tab-content6{
+
+            width:95%;
+              height: auto;
+            display:block;
+
+            display: none;
+            position:relative;
+            margin-left: 15px;
+           margin: 10px auto;
+          }
+          .tab-content p{
+            font-size: 15px;
+             font-family: 'Lato', sans-serif;
+             text-align: justify;
+             padding: 5px;
+             font-weight: 400;
+                 color: rgba(0,60,93,1);
+
+          }
+          .tab-content2 p{
+            font-size: 15px;
+             font-family: 'Lato', sans-serif;
+             text-align: justify;
+             padding: 5px;
+             font-weight: 400;
+                 color: rgba(0,60,93,1);
+                 
+          }.tab-content3 p{
+            font-size: 15px;
+             font-family: 'Lato', sans-serif;
+             text-align: justify;
+             padding: 5px;
+             font-weight: 400;
+                 color: rgba(0,60,93,1);
+                 
+          }.tab-content4 p{
+            font-size: 15px;
+             font-family: 'Lato', sans-serif;
+             text-align: justify;
+             padding: 5px;
+             font-weight: 400;
+                 color: rgba(0,60,93,1);
+                 
+          }.tab-content5 p{
+            font-size: 15px;
+             font-family: 'Lato', sans-serif;
+             text-align: justify;
+             padding: 5px;
+             font-weight: 400;
+                 color: rgba(0,60,93,1);
+                 
+          }
+          .tab-content6 p{
+            font-size: 15px;
+             font-family: 'Lato', sans-serif;
+             text-align: justify;
+             padding: 5px;
+             font-weight: 400;
+                 color: rgba(0,60,93,1);
+                 
+          }
+          .tabs li >  label {
+
+            height: 30px;
+            line-height: 30px;
+            max-width:600px;
+            cursor:pointer;
+            color:rgba(255,255,255,1);
+
+              
+          }
+          label {
+            color:rgba(255,255,255,1);
+
+          }
+          .tabs li >  label  h2{
+              margin: 5px auto 0 auto;
+              font-family: 'Lato', sans-serif;
+              font-size: 15px;
+              text-align: center;
+              padding-top: 25px;
+            }
+
+
+
+
+          .image1{
+            width: 250px;
+            height: 129px;
+            margin: 0 auto 0 auto;
+            background: url(../img/parquelasallegrande.jpg) center no-repeat;
+            background-size: cover;
+
+          }
+          .image2{
+            width: 250px;
+            height: 129px;
+            margin: 0 auto 0 auto;
+             background: url(../img/nogal-color.jpg) center no-repeat;
+            background-size: cover;
+          }
+          .image3{
+             width: 250px;
+            height: 129px;
+            margin: 0 auto 0 auto;
+            background: url(../img/nacional-color.jpg) center no-repeat;
+            background-size: cover;
+          }
+          .image4{
+             width: 250px;
+            height: 129px;
+            margin: 0 auto 0 auto;
+             background: url(../img/ministerio-color.jpg) center no-repeat;
+            background-size: cover;
+          }
+          .image5{
+             width: 250px;
+            height: 129px;
+            margin: 0 auto 0 auto;
+            background: url(../img/puente-color.jpg) center no-repeat;
+            background-size: cover;
+          }
+          .image6{
+            width: 250px;
+            height: 129px;
+            margin: 0 auto 0 auto;
+            background: url(../img/cmpr-color.jpg) center no-repeat;
+            background-size: cover;
+          }
+          .textocaja{
+            width: 100%;
+            height: auto;
+            
+          }
+          .textocaja{
+            max-width: 250px;
+            height: auto;
+            margin:0 auto;
+            
+          }
+          .textocaja p{
+
+            text-align: justify;
+            
+            font-size: 15px;
+            
+          }
+
+          }
+ 
+/*----------------MÓDULO TRES -----------*/
+ #modulotres .contenedor{
+ 	background: url(../img/videos-section-fondo.png);
+	max-width: 1280px;
+	height: 800px;
+	box-sizing:border-box;
+	padding-top: 35px;
+	margin: 0 auto;
+ }
+ 
+#slide {
+  max-width: 1000px;
+  height: 720px;
+  margin:0 auto;
+}
+/*------------- MEDIASCREEN MÓDULO TRES (1024 px)------------*/
+
+@media screen and (max-width: 1024px){
+  #modulotres .contenedor{
+  background: url(../img/videos-section-fondo.png);
+  width: 100%;
+  height: auto;
+  box-sizing:border-box;
+  padding-top: 35px;
+  margin: 0 auto;
+ }
+ #slide {
+  margin: 15% auto ;
+ }
+
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+}
+          /*--------MEDIASCREEN MODULO TRES (SLIDE)----*/
+
+          @media screen and (max-width: 830px){
+            #slide {
+            margin: 15% auto -25% auto ;
+           }
+          }
+          @media screen and (max-width: 600px){
+            #slide {
+            margin: 15% auto -55% auto ;
+           }
+          }
+
+          @media screen and (max-width: 400px){
+            #slide {
+            margin: 15% auto -105% auto ;
+           }
+          }
+          @media screen and (max-width: 353px){
+            #slide {
+            margin: 15% auto -140% auto ;
+           }
+          }
+
+/* -------------- MODULO CUATRO ------------*/
+ 
+
+#modulocuatro{
+  width:100%;
+    height:800px;
+  
+}
+#modulocuatro .contenedor{
+  width:1280px;
+  height:800px;
+  margin:0 auto;
+  background-image: url(../img/cronicas-section-fondo.png);
+  box-sizing:border-box;
+	padding-top: 35px;
+}
+#cajabloques{
+  width:100%;
+  height:512px;
+ 
+  margin:60px auto 0 auto;
+}
+.bloque1{
+  width:20%;
+  height:512px;
+  background:rgba(0,60,93,1);
+  float:left;
+}
+.box1{
+  
+  width:100%;
+  height:50%;
+  background:rgba(0,60,93,1);
+}
+.box2{
+  width:100%;
+  height:50%;
+   background:rgba(0,60,93,1);
+}
+
+.bloque1 h4 {
+  text-align: center;
+  padding: 20px 10px 15px 10px;
+  color: #FFCE00;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+}
+
+.bloque1 p {
+  text-align: center;
+  padding: 0px 20px 10px 20px;
+  box-sizing:border-box;
+  color:rgba(255,255,255,1);
+  font-size: 15px;
+  font-family: 'Lato', sans-serif;
+}
+
+          /*----MEDIASCREEN MODULO CUATRO (1024 PX)---------*/
+          @media screen and (max-width: 1024px){
+
+            #modulocuatro{
+            max-width:1280px;
+              height:auto;
+            
+          }
+          #modulocuatro .contenedor{
+            width:100%;
+            height:auto;
+            margin:0 auto;
+            background-image: url(../img/cronicas-section-fondo.png);
+            box-sizing:border-box;
+            padding-top: 35px;
+          }
+          #cajabloques{
+            width:100%;
+            height:auto;
+           
+            margin:60px auto 0 auto;
+          }
+          .bloque1{
+            width:256px;
+            height:512px;
+            background:rgba(0,60,93,1);
+            float:none;
+            display: block;
+            margin: 0 auto 15px auto;
+          }
+          .box1{
+            
+            width:256px;
+            height:256px;
+            background:rgba(0,60,93,1);
+          }
+          .box2{
+            width:256px;
+            height:256px;
+             background:rgba(0,60,93,1);
+          }
+
+          .bloque1 h4 {
+            text-align: center;
+            padding: 20px 10px 15px 10px;
+            color: #FFCE00;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Lato', sans-serif;
+          }
+
+          .bloque1 p {
+            text-align: center;
+            padding: 0px 20px 10px 20px;
+            box-sizing:border-box;
+            color:rgba(255,255,255,1);
+            font-size: 15px;
+            font-family: 'Lato', sans-serif;
+          }
+
+          }
+
+
+/*----------estilos de hover------------*/
+
+.ovrly27 {
+    height:100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+   
+}
+.ovrly27 img {
+    height:100%;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.ovrly27 .ovrly {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+     background:rgba(0,60,93,0.5);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: -50%;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.ovrly27 .buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.ovrly27 .buttons .fa {
+    background: rgb(256, 256, 256);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    color: rgba(50, 50, 50, 0.9);
+    display: inline-block;
+    margin: 0 1px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    width: 90px;
+    height: 40px;
+    -webkit-transition: all 0.2s 0.1s;
+    -moz-transition: all 0.2s 0.1s;
+    -o-transition: all 0.2s 0.1s;
+    transition: all 0.2s 0.1s;
+    opacity: 0;
+}
+.ovrly27:hover .ovrly {
+    -webkit-transform: scale(3);
+    -moz-transform: scale(3);
+    -ms-transform: scale(3);
+    -o-transform: scale(3);
+    transform: scale(3);
+}
+.ovrly27:hover .buttons .fa {
+    opacity: 1;
+    color:rgba(0,60,93,1);
+}
+
+
+
+
+
+
+/*-----------------------MÓDULO CINCO  ---------------------*/
+
+
+#modulocinco{
+  width: 100%;
+  height: auto;
+}
+ #modulocinco.contenedor{
+  width:100%;
+  height:1140px;
+  box-sizing:border-box;
+  padding-top: 35px;
+}
+.title2{
+  width: 1200px;
+  height: 90px;
+  margin:0 auto 0 auto;
+
+}
+.title2 h1{
+   font-family: 'Lato', sans-serif;
+   font-size: 40px;
+   color: rgba(0,60,93,1);
+   text-align: center;
+   padding: 20px;
+   font-weight: bolder;
+   text-shadow: 2px 2px 4px #000000;
+
+}
+
+#cajafotos{
+  width:100%;
+  height:600px;
+}
+.counter{
+  width:1280px;
+  height: 200px;
+  margin:0 auto 0 auto;
+}
+#fotouno{
+  width: 100%;
+  height: 200px;
+  background: url(../img/cesarrecortada.jpg) center no-repeat ;
+  background-size: cover;
+  display: block;
+  box-sizing:border-box;
+  padding:50px;
+}
+ #textofotouno{
+  width: 500px;
+  height: 100px;
+  background:rgba(32,159,203, 0.8);
+   float:left;
+ }
+ #textofotouno h3{
+    font-family: 'Lato', sans-serif;
+  color: rgba(255,255,255, 1);
+  font-size: 35px;
+  text-align: center;
+  padding-top:20px;
+  box-sizing:border-box;
+ }
+#fotodos{
+  width: 100%;
+  height: 200px;
+  background: url(../img/duinadelmar.jpg) center no-repeat ;
+  background-size: cover;
+  display: block;
+  box-sizing:border-box;
+  padding:50px;
+
+}
+
+ #textofotodos{
+  width: 500px;
+  height: 100px;
+  background:rgba(0,60,96, 0.8);
+ float:right;
+     margin-right: 66px;
+  }
+   #textofotodos h3{
+     font-family: 'Lato', sans-serif;
+  color: rgba(255,255,255, 1);
+  font-size: 35px;
+  text-align: center;
+  padding-top:22px;
+  box-sizing:border-box;
+ }
+#fototres{
+  width: 100%;
+  height: 200px;
+  background: url(../img/ABSALON.jpg) center no-repeat ;
+  background-size: cover;
+  display: block;
+  box-sizing:border-box;
+  padding:50px;
+}
+#textofototres{
+  width: 500px;
+  height: 100px;
+  background:rgba(32,159,203, 0.5);
+  float:left;
+  }
+   #textofototres h3{
+     font-family: 'Lato', sans-serif;
+  color: rgba(255,255,255, 1);
+  font-size: 35px;
+  text-align: center;
+  padding-top:22px;
+  box-sizing:border-box;
+ }
+#info{
+  witdh:100%;
+  height:400px;
+  background:rgba(32,159,203, 1);
+}
+.counterinfo{
+  width:1280px;
+  height: 400px;
+  margin:0 auto 0 auto;
+}
+.counterinfo h4 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+    font-size: 22px;
+    padding: 20px 20px 0px 20px;
+  color: #FFCE00;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    
+}
+.counterinfo p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+    font-size: 20px;
+    padding: 10px;
+    padding-top: 40px;
+    color: white;
+    text-align: center;
+
+} 
+.counterinfo p span{
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+    font-size: 20px;
+  color: #FFCE00;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    font-style: italic;
+}
+.counterinfo h5{
+  font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    color: rgba(255,255,255, 1);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+          /*------------MEDIA SCREEN MODULO CINCO (1024 PX)----------------*/
+
+          @media screen and (max-width: 1024px){
+            #modulocinco .contenedor{
+            width:100%;
+            height:auto;
+            box-sizing:border-box;
+            padding-top: 35px;
+          }
+          .title2{
+            width: 100%;
+            height: 90px;
+            margin:0 auto 0 auto;
+
+          }
+          .title2 h1{
+             font-family: 'Lato', sans-serif;
+             font-size: 30px;
+             color: rgba(0,60,93,1);
+             text-align: center;
+             padding: 20px;
+             font-weight: bolder;
+             text-shadow: 2px 2px 4px #000000;
+
+          }
+
+          #cajafotos{
+            width:100%;
+            height:600px;
+            padding-top: 50px;
+          }
+          .counter{
+            width:100%;
+            height: 200px;
+            margin:0 auto 0 auto;
+          }
+          #fotouno{
+            width: 100%;
+            height: 200px;
+            background: url(../img/cesarrecortada.jpg) center no-repeat ;
+            background-size: cover;
+            display: block;
+            box-sizing:border-box;
+            padding:50px;
+          }
+           #textofotouno{
+            width: 100%;
+            height: 50px;
+            background:rgba(32,159,203, 0.8);
+             float:none;
+             margin-top: 100px;
+             
+           }
+           #textofotouno h3{
+              font-family: 'Lato', sans-serif;
+            color: rgba(255,255,255, 1);
+            font-size: 30px;
+            text-align: center;
+            padding-top:10px;
+            box-sizing:border-box;
+           }
+          #fotodos{
+            width: 100%;
+            height: 200px;
+            background: url(../img/duinadelmar.jpg) center no-repeat ;
+            background-size: cover;
+            display: block;
+            box-sizing:border-box;
+            padding:50px;
+          }
+
+           #textofotodos{
+            width: 100%;
+            height: 50px;
+            background:rgba(0,60,96, 0.8);
+           float:none;
+           margin-top: 100px;
+               margin-right: 0px;
+
+            }
+             #textofotodos h3{
+               font-family: 'Lato', sans-serif;
+            color: rgba(255,255,255, 1);
+            font-size: 30px;
+            text-align: center;
+            padding-top:10px;
+            box-sizing:border-box;
+           }
+          #fototres{
+            width: 100%;
+            height: 200px;
+            background: url(../img/ABSALON.jpg) center no-repeat ;
+            background-size: cover;
+            display: block;
+            box-sizing:border-box;
+            padding:50px;
+          }
+          #textofototres{
+            width: 100%;
+            height: 50px;
+            background:rgba(32,159,203, 0.5);
+            float:none;
+            margin-top: 100px;
+            }
+             #textofototres h3{
+               font-family: 'Lato', sans-serif;
+            color: rgba(255,255,255, 1);
+            font-size: 30px;
+            text-align: center;
+            padding-top:10px;
+            box-sizing:border-box;
+           }
+          #info{
+            width:100%;
+            height:auto;
+            background:rgba(32,159,203, 1);
+          }
+          .counterinfo{
+            width:100%;
+            height:auto;
+            margin:0 auto 0 auto;
+          }
+          .counterinfo h4 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+              font-size: 22px;
+              padding: 20px 20px 0px 20px;
+            color: #FFCE00;
+              text-align: center;
+              text-shadow: 2px 2px 4px #000000;
+              
+          }
+          .counterinfo p {
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+              font-size: 20px;
+              padding: 10px;
+              padding-top: 40px;
+              color: white;
+              text-align: center;
+
+          } 
+          .counterinfo p span{
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+              font-size: 20px;
+            color: #FFCE00;
+              text-align: center;
+              text-shadow: 2px 2px 4px #000000;
+              font-style: italic;
+          }
+          .counterinfo h5{
+              font-size: 60px;
+          }
+          }
+/*-------MEDIA SCREEN MODULO CINCO (530 PX)-----------*/
+
+          @media screen and (max-width: 530px){
+            .counterinfo h5{
+            font-family: 'Lato', sans-serif;
+              font-weight: 500;
+              font-size: 40px;
+              color: rgba(255,255,255, 1);
+              text-align: center;
+              padding-top: 30px;
+              padding-bottom: 30px;
+          }
+          #textofotouno h3{
+            font-size: 20px;
+           }
+          #textofotodos h3{
+            font-size: 20px;
+           }
+           #textofototres h3{
+            font-size: 20px;
+           }
+          }
+
+
+/*---------------FOOTER---------------*/
+
+footer{ 
+	width:100%;
+  height:252px;
+  background:url(../img/footerred.jpg) center no-repeat;
+  background-size: cover;
+ 
+
+}
+.contenedorfooter{
+  width:1280px;
+  height:252px;
+  margin:0 auto;
+  box-sizing:border-box;
+  padding-top:30px;
+}
+.redes{
+  width:142px;
+  height:66px;
+ float: left;
+  display:inline-block;
+ margin: 65px 0px 0px 170px;
+  
+  
+}
+.facebook{
+    width:66px;
+  height:66px;
+  float:left;
+  display:inline-block;
+  float: left;
+  
+}
+.twitter{
+    width:66px;
+  height:66px;
+  float:right;
+  display:inline-block;
+  
+}
+.donacion{
+  width:530px;
+  height:154px;
+  border-right:3px solid #FFCE00 ; 
+  display:inline-block;
+  float: left;
+   margin: 20px 0px 0px 100px ;
+  
+}
+.donacion p{
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    text-align:right;
+    padding-right:20px; 
+    margin: 20px auto 0 auto;
+
+   
+ 
+}
+.cmpr{
+  width:196px;
+  height:186px;
+  display:inline-block;
+  margin-left:10px;
+  float:left;
+  
+}
+          /*----------MEDIASCREEN  FOOTER-----------*/
+
+          @media screen and (max-width: 1024px){
+            footer{ 
+            width:100%;
+            height:auto;
+            background:url(../img/footerred.jpg) center no-repeat;
+            background-size: cover;
+          }
+            .contenedorfooter{
+            width:100%;
+            height:auto;
+            margin:0 auto;
+            box-sizing:border-box;
+            padding-top:30px;
+            padding-bottom: 10px
+          }
+          .redes{
+            width:142px;
+            height:66px;
+           float: none;
+            display:block;
+           margin: 0 auto;
+            
+            
+          }
+          .facebook{
+              width:66px;
+            height:66px;
+            float:left;
+            display:inline-block;
+            float: left;
+            
+          }
+          .twitter{
+              width:66px;
+            height:66px;
+            float:right;
+            display:inline-block;
+            
+          }
+          .donacion{
+            width:85%;
+            height:auto;
+            border-right: none;
+            border-bottom:3px solid #FFCE00 ; 
+            display:block;
+            float: none;
+             margin: 0 auto;
+            
+          }
+          .donacion p{
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+              font-size: 16px;
+              color: #fff;
+              text-align:center;
+              padding-right:20px; 
+              margin: 20px auto 0 auto;
+
+             
+           
+          }
+          .cmpr{
+            width:196px;
+            height:186px;
+            display:block;
+            margin-left:10px;
+            float:none;
+            margin: 20px auto 15px auto;
+          }
+
+
+
+
+
+
+
+
+
